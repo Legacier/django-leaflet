@@ -92,7 +92,7 @@ before_install:
 install:
  # GeoDjango dependencies
  - sudo apt-get update -qq
- - sudo apt-get install -y libproj-dev libgeos-dev
+ - sudo apt-get install -y libproj-dev libgeos-dev binutils gdal-bin python-gdal
 
  - if [[ $DATABASE == sqlite ]]; then sudo apt-get install -y libspatialite-dev; fi
  - if [ $DATABASE == sqlite ] && [ $TRAVIS_PYTHON_VERSION == 2.7 ]; then pip install pysqlite==2.8.2; fi
